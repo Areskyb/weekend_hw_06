@@ -4,6 +4,9 @@ document.addEventListener('DOMContentLoaded', () => {
   const form = document.querySelector('.form');
   form.addEventListener('submit',handleFormSubmit);
   
+  const del = document.querySelector('#delete');
+  del.addEventListener('click',handleDelete);
+  
 });
 
 const handleFormSubmit = function(event) {
@@ -30,6 +33,13 @@ list.appendChild(item);
 this.reset();
 
 };
+
+const handleDelete = function(event){
+  const list = document.querySelector('.list');
+  while(list.firstChild){
+  list.removeChild(list.firstChild);
+};
+}
 
 //store the values into variables.
 //create new elements into the dom 
