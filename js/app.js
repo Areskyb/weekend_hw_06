@@ -8,6 +8,30 @@ document.addEventListener('DOMContentLoaded', () => {
 
 const handleFormSubmit = function(event) {
   event.preventDefault();
-  console.log(event);
-}
+  
+const list = document.querySelector('.list');
+const item = document.createElement('div');
+
+const name = document.createElement('h1');
+name.textContent = event.target.name.value;
+
+const type = document.createElement('h2');
+type.textContent = event.target.banana.value;
+
+const power = document.createElement('p');
+power.textContent = event.target.power.value;
+
+item.appendChild(name);
+item.appendChild(type);
+item.appendChild(power);
+
+list.appendChild(item);
+
+this.reset();
+
+};
+
+//store the values into variables.
+//create new elements into the dom 
+
 
